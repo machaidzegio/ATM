@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 15px;
+      "
+    >
+      <button onclick="login()" id="dNone" style="display: flex">შესვლა</button>
+      <p id="greetings"></p>
+      <p id="checkBalanceTxt"></p>
+    </div>
+    <div
+      style="
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 15px;
+      "
+      id="atmDiv"
+    >
+      <label for="billNumber">ATM</label>
+      <input type="text" id="billNumber" />
+      <button onclick="withdraw()">გამოტანა</button>
+
+      <p id="sum"></p>
+      <p id="bills"></p>
+      <div
+        style="display: none; flex-direction: column; align-items: center"
+        id="insertDiv"
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+          "
+        >
+          <button onclick="addBalanceFromInput()">ფულის შეტანა</button>
+        </div>
+      </div>
+      <button onclick="checkMonay()">თანხის შემოწმება</button>
+      <p id="remAmount"></p>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
